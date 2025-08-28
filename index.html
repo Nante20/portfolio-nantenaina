@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nantenaina Razafindramisa – Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Nantenaina Razafindramisa — Conceptrice Développeuse d’Applications. Compétences, expériences et formations."
+    />
+    <meta property="og:title" content="Portfolio — Nantenaina Razafindramisa" />
+    <meta
+      property="og:description"
+      content="Conceptrice Développeuse d’Applications : CI/CD, Java/Spring, PHP/Symfony & Laravel, React, SQL/NoSQL."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b1020; /* deep navy */
+        --bg-soft: #11162a; /* slightly lighter */
+        --card: #0f172a; /* slate-900 */
+        --text: #e5e7eb; /* gray-200 */
+        --muted: #b3b8c5; /* muted text */
+        --brand: #0ea5e9; /* sky-500 */
+        --brand-2: #22c55e; /* green-500 */
+        --chip: rgba(255, 255, 255, 0.08);
+        --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        --radius: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
+          sans-serif;
+        background: radial-gradient(
+            1200px 800px at 90% -10%,
+            rgba(34, 197, 94, 0.25),
+            transparent 50%
+          ),
+          radial-gradient(
+            900px 700px at -10% 0%,
+            rgba(14, 165, 233, 0.25),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Layout */
+      .shell {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 20px 90px;
+      }
+      header.site {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(10px);
+        background: linear-gradient(
+          180deg,
+          rgba(11, 16, 32, 0.85),
+          rgba(11, 16, 32, 0.65)
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .site-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: conic-gradient(
+          from 180deg at 50% 50%,
+          var(--brand),
+          var(--brand-2),
+          var(--brand)
+        );
+        box-shadow: var(--shadow);
+      }
+      .brand h1 {
+        font-size: 16px;
+        margin: 0;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+      }
+
+      nav a {
+        margin-left: 16px;
+        padding: 8px 12px;
+        border-radius: 12px;
+        background: transparent;
+        color: var(--text);
+        border: 1px solid transparent;
+      }
+      nav a:hover {
+        background: var(--chip);
+        border-color: rgba(255, 255, 255, 0.08);
+        text-decoration: none;
+      }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 24px;
+        align-items: center;
+        margin-top: 28px;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 24px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: var(--shadow);
+      }
+      .avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .hero h2 {
+        margin: 0 0 6px;
+        font-size: 28px;
+        letter-spacing: 0.4px;
+      }
+      .hero p.role {
+        margin: 0;
+        color: var(--muted);
+      }
+      .hero .links {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.02)
+        );
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 0.12s ease, background 0.2s ease;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        text-decoration: none;
+      }
+      .btn.primary {
+        background: linear-gradient(
+          180deg,
+          rgba(14, 165, 233, 0.35),
+          rgba(14, 165, 233, 0.15)
+        );
+        border-color: rgba(14, 165, 233, 0.5);
+      }
+
+      /* Section */
+      section {
+        margin-top: 42px;
+      }
+      .section-title {
+        font-size: 22px;
+        margin-bottom: 14px;
+        letter-spacing: 0.3px;
+      }
+
+      /* Cards grid */
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      /* Chips */
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .chip {
+        background: var(--chip);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--text);
+      }
+
+      /* Timelines */
+      .timeline {
+        display: grid;
+        gap: 12px;
+      }
+      .timeline-item {
+        display: grid;
+        gap: 4px;
+        padding: 12px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px dashed rgba(255, 255, 255, 0.08);
+      }
+      .timeline-item .when {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .timeline-item h4 {
+        margin: 2px 0;
+        font-size: 16px;
+      }
+      .timeline-item .where {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* Contact */
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+      .contact-list li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .kbd {
+        font: 600 12px/1 "Inter";
+        padding: 4px 8px;
+        background: var(--chip);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+      }
+
+      footer {
+        margin: 56px 0 0;
+        padding: 24px 0 48px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* Responsive */
+      @media (max-width: 780px) {
+        .hero {
+          grid-template-columns: 90px 1fr;
+        }
+        .avatar {
+          width: 90px;
+          height: 90px;
+          border-radius: 14px;
+        }
+        .hero h2 {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="site-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <h1>Nantenaina Razafindramisa — Portfolio</h1>
+        </div>
+        <nav>
+          <a href="#apropos">À propos</a>
+          <a href="#competences">Compétences</a>
+          <a href="#experiences">Expériences</a>
+          <a href="#formations">Formations</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <div class="avatar">
+          <img
+            src="assets/photo.jpeg"
+            alt="Portrait de Nantenaina Razafindramisa"
+          />
+        </div>
+        <div>
+          <h2>Conceptrice Développeuse d’Applications</h2>
+          <p class="role">
+            Basée à Oullins (69600) • Ouverte aux opportunités — Stage non
+            rémunéré de 4 mois à partir de janvier 2026
+          </p>
+          <div class="links">
+            <a
+              class="btn primary"
+              href="https://github.com/Nante20/"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/nantenaina-razafindramisa-05636a307/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a class="btn" href="CV.pdf" target="_blank" rel="noreferrer"
+              >Télécharger mon CV</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="apropos">
+        <h3 class="section-title">À propos</h3>
+        <div class="card">
+          <p>
+            Passionnée par le développement d’applications web
+            <strong>front‑end et back‑end</strong>, je conçois, développe et
+            déploie des solutions modernes, maintenables et testées. J’aime
+            l’architecture propre. Mon objectif est de contribuer à des projets
+            concrets dans une équipe <strong>Agile/Scrum</strong> tout en
+            continuant à progresser.
+          </p>
+        </div>
+      </section>
+
+      <section id="competences">
+        <h3 class="section-title">Compétences & Outils</h3>
+        <div class="card">
+          <div class="chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">React</span>
+            <span class="chip">Java / Spring Boot</span>
+            <span class="chip">PHP 8 / Symfony</span>
+            <span class="chip">Laravel</span>
+            <span class="chip">SQL</span>
+            <span class="chip">NoSQL</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">Git & GitHub</span>
+            <span class="chip">Figma</span>
+            <span class="chip">UML</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Méthodologie Agile / Scrum</span>
+            <span class="chip">Notions DevOps</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiences">
+        <h3 class="section-title">Expériences</h3>
+        <div class="grid">
+          <div class="card timeline">
+            <div class="timeline-item">
+              <div class="when">07/2024 – 09/2024</div>
+              <h4>Stagiaire Développement Web — ASSEDA</h4>
+              <div class="where">PHP (Laravel), Stripe, Mailtrap, MySQL</div>
+              <ul>
+                <li>
+                  Développement d’un site web complet en
+                  <strong>PHP/Laravel</strong>.
+                </li>
+                <li>
+                  Intégration d’un <strong>paiement en ligne</strong> avec
+                  Stripe.
+                </li>
+                <li>
+                  Mise en place d’un système de
+                  <strong>gestion des e‑mails</strong> (Mailtrap).
+                </li>
+                <li>
+                  Conception <em>front‑end</em> et <em>back‑end</em> selon les
+                  besoins client.
+                </li>
+                <li>
+                  Modélisation BD relationnelle et interactions dynamiques.
+                </li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="when">09/2023</div>
+              <h4>Stage d’immersion — MAPADO (Lyon)</h4>
+              <div class="where">Découverte du métier de développeuse web</div>
+              <ul>
+                <li>
+                  Observation du cycle de vie complet d’une application web.
+                </li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="when">01/2016 – 08/2022</div>
+              <h4>Rédactrice Web Freelance — Madagascar</h4>
+              <div class="where">Contenu SEO, gestion multi‑projets</div>
+              <ul>
+                <li>Rédaction optimisée SEO et coordination projet.</li>
+                <li>Respect des délais et autonomie sur plusieurs clients.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="formations">
+        <h3 class="section-title">Formations & Diplômes</h3>
+        <div class="grid">
+          <div class="card timeline">
+            <div class="timeline-item">
+              <div class="when">Depuis juin 2025</div>
+              <h4>Concepteur Développeur d’Applications — M2i</h4>
+              <ul>
+                <li>Conception & développement full‑stack.</li>
+                <li>Java / Spring Boot, React.</li>
+                <li>Bases de données : MySQL, PostgreSQL.</li>
+                <li>UML, MVC, gestion de projet Agile/Scrum.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="when">2023 – 2024</div>
+              <h4>Titre RNCP Développeur Web & Web Mobile — AFPA</h4>
+              <ul>
+                <li>Sites responsives : HTML, CSS, JavaScript.</li>
+                <li>Applications web dynamiques : PHP, MySQL.</li>
+                <li>Premiers pas avec Bootstrap & Symfony.</li>
+                <li>Git/GitHub et collaboration d’équipe.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="langues">
+        <h3 class="section-title">Langues</h3>
+        <div class="card">
+          <div class="chips">
+            <span class="chip">Français — C1</span>
+            <span class="chip">Anglais technique — B1</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3 class="section-title">Contact</h3>
+        <div class="card">
+          <ul class="contact-list">
+            <li>
+              <span class="kbd">Email</span>
+              <a href="mailto:nantyandria@gmail.com">nantyandria@gmail.com</a>
+            </li>
+            <li>
+              <span class="kbd">Localisation</span> Oullins, 69600 (France)
+            </li>
+            <li>
+              <span class="kbd">GitHub</span>
+              <a
+                href="https://github.com/Nante20/"
+                target="_blank"
+                rel="noreferrer"
+                >github.com/Nante20</a
+              >
+            </li>
+            <li>
+              <span class="kbd">LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/in/nantenaina-razafindramisa-05636a307/"
+                target="_blank"
+                rel="noreferrer"
+                >Profil LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Nantenaina Razafindramisa — Portfolio.
+        Construit avec HTML, CSS & JS.
+      </footer>
+    </main>
+
+    <script>
+      // Année dynamique & défilement doux
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const id = a.getAttribute("href").slice(1);
+          const target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
